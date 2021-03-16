@@ -1,22 +1,32 @@
-title:        Women in Tech
-url:          http://women-in-tech.apievangelist.com/
+title:        API Evangelist Notable Women in Tech
+description: This is an overview of the world of APIs, providing a 101 level walk through from the perspective of consuming APIs.
+url:          https://women-in-tech.apievangelist.com/
+raw_url: twitter.lesson.apievangelist.com/apis/
+
+tag: Consume 101
+
+logo: https://kinlane-productions2.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
+logo_width:   80
+logo_bottom_padding: 10
+
 version:      1.1.1
 author:
   name:       'Kin Lane'
   email:      'info@apievangelist.com'
-markdown:     rdiscount
-permalink:    pretty
-pygments:     true
+markdown:     kramdown
 
-permalink: /:categories/:year/:month/:day/:title 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+permalink: /:categories/:year/:month/:day/:title/
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
 
-paginate: 50
-paginate_path: "/updates/page:num"
+paginate: 25
+paginate_path: "/blog/page:num"
 
-production_url : http://women-in-tech.apievangelist.com/
+github_user: api-evangelist-api-consumer-lessons
+github_repo: 101-consumer
+github_branch: master
 
-BASE_PATH : http://women-in-tech.apievangelist.com/
-
-categories_path : /categories.html
-tags_path : /tags.html
+# Footer
+footer_title: API Evangelist
+footer_link: http://apievangelist.com
+footer_image_source: https://s3.amazonaws.com/kinlane-productions2/footer/empowered-by-you-banner.png
+footer_image_width: 60

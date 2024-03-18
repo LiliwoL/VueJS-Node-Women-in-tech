@@ -1,0 +1,8 @@
+.idea/
+vue-women-in-tech/.env
+vue-women-in-tech/node_modules/
+.env
+
+backend/node_modules/
+
+mariadb_data/

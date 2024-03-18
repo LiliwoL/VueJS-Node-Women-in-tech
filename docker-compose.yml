@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  # MariaDB
+  women-in-tech-mariadb:
+    image: mariadb:10.5
+    container_name: women-in-tech-mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: "$DB_ROOT_PASSWORD"
+      MYSQL_DATABASE: "$DB_NAME"
+      MYSQL_USER: "$DB_USER"
+      MYSQL_PASSWORD: "$DB_PASSWORD"
+    ports:
+      - "3309:3306"
+    volumes:
+      # Persistance des données
+      - ./mariadb_data:/var/lib/mysql
+
+      # Script SQL lancé au démarrage
+      #- ./DATA/database.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - women-in-tech-network
+
+  # PhpMyAdmin
+  women-in-tech-phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: women-in-tech-phpmyadmin
+    environment:
+      PMA_HOST: "$DB_HOST"
+      PMA_PORT: "$DB_PORT"
+      PMA_USER: "$DB_USER"
+      PMA_PASSWORD: "$DB_PASSWORD"
+    ports:
+      - "8088:80"
+    networks:
+      - women-in-tech-network
+
+networks:
+  women-in-tech-network:
+    driver: bridge

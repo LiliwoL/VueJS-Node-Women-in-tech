@@ -1,11 +1,30 @@
 Node JS REST API with Express
 
-Step 1- Create Database and Table (in Docker)
-Step 2 – Install Express, MySQL2, and Cors
-Step 3 – Connect to Database
-Step 4 – Create Controller, Model and Route
-Step 5 – Update index.js
-Step 6 – Start Node JS Express + MySQL App
+1 - Create Database and Table (in Docker)
+2 - Création de l'application Backend Node JS
+    - Dépendances: Express, MySQL2, Cors, body-parser et dotenv
+3 – Connect to Database
+    - Création d'un fichier de configuration de connexion à la base de données
+    - Vérification
+4 – Create Controller, Model and Route
+    - Création d'un script principal
+    - Création des routes
+        - Les routes seront définies dans un fichier de route spécifique
+    - Création du modèle
+        - Le modèle sera défini dans un fichier de modèle spécifique
+        - Le modèle contiendra les fonctions pour effectuer les opérations CRUD basiques
+    - Création du contrôleur
+        - Le contrôleur sera défini dans un fichier de contrôleur spécifique
+        - Le contrôleur contiendra les actions spécifiques de chaque route
+        - Chaque action du contrôleur appellera les fonctions du modèle
+5 – Update index.js
+    - Importer les dépendances
+    - Créer une instance d'Express
+    - Définir le port
+    - Définir les routes
+    - Lancer le serveur
+6 – Start Node JS Express + MySQL App
+7 - Test API using Postman
 
 ---
 

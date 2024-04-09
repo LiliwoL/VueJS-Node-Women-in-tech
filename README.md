@@ -1,4 +1,26 @@
 
+# Lancement du docker
+
+Le fichier docker-compose.yml est configuré pour lancer les services:
+- mariadb
+- phpmyadmin
+
+```bash
+docker-compose up -d --env-file .env.docker
+```
+
+> Vous devez avoir un service mariadb et un service phpmyadmin fonctionnels.
+> La base de données doit déjà être remplie.
+
+> ![](readme_docs/f7b5a7c8.png)
+
+
+PHPMyAdmin
+http://localhost:8088/
+
+---
+
+
 # Dépendances globales (sur le système)
 
 Install de vue-cli
@@ -42,5 +64,7 @@ npm run serve
 
 # Accès
 
+App
+http://localhost:8080/
 PHPMyAdmin
 http://localhost:8088/

@@ -1,4 +1,8 @@
-Node JS REST API with Express
+# Node JS REST API with Express
+
+v0.1
+
+## Etapes
 
 1 - Create Database and Table (in Docker)
 2 - Création de l'application Backend Node JS
@@ -28,7 +32,12 @@ Node JS REST API with Express
 
 ---
 
-# Initialisation
+## 1. Create Database and Table
+
+
+---
+
+## 2. Initialisation de l'application Backend Node JS
 
 Dans le dossier backend
 
@@ -50,10 +59,10 @@ Modifier le fichier package.json et ajouter
 _"type": "module",_
     
 ```json
-[...]
+/* [...] */
 "main": "index.js",
 "type": "module",
-[...]
+/* [...] */
 ```
 
 https://www.tutsmake.com/vue-js-crud-node-js-express-mysql-example/

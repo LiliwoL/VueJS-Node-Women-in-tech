@@ -1,4 +1,32 @@
 
+# Arborescence
+
+- docker-compose.yml
+- .env.docker
+- .gitignore
+- README.md
+- DATA
+  - database.sql
+- backend
+    - index.js
+    - routes
+        - index.js
+    - controllers
+        - womanController.js
+    - models
+        - womanModel.js
+    - config
+        - database.js
+    - package.json
+
+- frontend
+- docker-compose.yml
+- .env.docker
+- .gitignore
+- README.md
+
+---
+
 # Lancement du docker
 
 Le fichier docker-compose.yml est configuré pour lancer les services:
@@ -6,7 +34,7 @@ Le fichier docker-compose.yml est configuré pour lancer les services:
 - phpmyadmin
 
 ```bash
-docker-compose up -d --env-file .env.docker
+docker-compose --env-file .env.docker up -d
 ```
 
 > Vous devez avoir un service mariadb et un service phpmyadmin fonctionnels.
@@ -17,6 +45,15 @@ docker-compose up -d --env-file .env.docker
 
 PHPMyAdmin
 http://localhost:8088/
+
+> Vérifier l'accès à PHPMyAdmin
+> Vérifier le contenu de la base de données
+
+---
+
+# Initialisation de l'application Backend Node JS
+
+
 
 ---
 

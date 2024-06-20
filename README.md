@@ -1,3 +1,22 @@
+# Women In Tech
+
+## Projet de démonstration
+
+Architecture
+
+Backend: Node JS
+Frontend: Vue JS
+Base de données: MariaDB
+
+## Accès
+
+App
+http://localhost:8080/
+
+PHPMyAdmin
+http://localhost:8088/
+
+---
 
 # Arborescence
 
@@ -29,7 +48,7 @@
 
 # Lancement du docker
 
-Le fichier docker-compose.yml est configuré pour lancer les services:
+Le fichier docker-compose.yml est configuré pour lancer les services :
 - mariadb
 - phpmyadmin
 
@@ -99,9 +118,3 @@ cd frontend
 npm run serve
 ```
 
-# Accès
-
-App
-http://localhost:8080/
-PHPMyAdmin
-http://localhost:8088/

@@ -72,13 +72,13 @@ npm install express body-parser mysql2 cors
 
 # Lecture du fichier d'environnement
 
-Dans le fichier **index.js**, on va aller chercher les variables d'environnement placées dans le fichier **.env.docker** (du dossier **parent**)
+Dans le fichier **index.js**, on va aller chercher les variables d'environnement placées dans le fichier **.env.backend**.
 
 ```javascript
 import dotenv from "dotenv";
 
 // Load dotenv file
-const env = dotenv.config( { path: '../.env.docker' } );
+const env = dotenv.config( { path: '.env.backend' } );
 console.log(env);
 ```
 > Vous devez avoir accès à toutes les variables d'environnement.

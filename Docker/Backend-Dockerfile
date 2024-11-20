@@ -14,7 +14,7 @@ RUN npm install -g nodemon
 COPY BACKEND/ .
 
 # Exposer le port sur lequel l'application va tourner
-EXPOSE 3000
+EXPOSE 5000
 
 # La commande CMD est surChargée par le docker-compose
 CMD ["nodemon", "index.js"]

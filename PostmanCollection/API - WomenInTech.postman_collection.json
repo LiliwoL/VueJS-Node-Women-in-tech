@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "b0d756d0-71a5-4f8b-9e14-68698080d687",
+		"name": "API - WomenInTech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2209621",
+		"_collection_link": "https://orange-astronaut-204458.postman.co/workspace/My-Workspace~8319e3bc-2ba7-4bd8-8f46-571e7523c6f5/collection/2209621-b0d756d0-71a5-4f8b-9e14-68698080d687?action=share&source=collection_link&creator=2209621"
+	},
+	"item": [
+		{
+			"name": "List women",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}:{{PORT}}/women",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"women"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Woman By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}:{{PORT}}/women/565157",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"women",
+						"565157"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Woman",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}:{{PORT}}/women",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"women"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Woman",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}:{{PORT}}/women/565157",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"women",
+						"565157"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Woman",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{URL}}:{{PORT}}/women/565157",
+					"protocol": "http",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"women",
+						"565157"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "PORT",
+			"value": "5000",
+			"type": "string"
+		}
+	]
+}

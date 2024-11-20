@@ -50,21 +50,29 @@ services:
       context: .
       dockerfile: ./Docker/Backend-Dockerfile
     container_name: women-in-tech-backend
+
     # Fichier d'environnement
     env_file:
       - .env.docker
-    # On expose le port 3000 du conteneur vers le port 5001 de la machine hôte
+
+    # On expose le port 5000 du conteneur vers le port 5001 de la machine hôte
     ports:
-      - "3000:3000"
+      - "5000:5000"
+
     # Volumes pour monter les fichiers de l'application Node.js (placés dans le dossier BACKEND)
     volumes:
+      # Dossier de l'app
       - ./BACKEND:/app
+      # Fichier d'environnement
+      - ./.env.docker:/app/.env.docker
       # On monte le dossier node_modules pour éviter de réinstaller les dépendances à chaque redémarrage du conteneur
       - /app/node_modules
     environment:
       - NODE_ENV=development
     # Commande exécutée au démarrage du service
     command: sh -c "npm install && nodemon index.js"
+    networks:
+      - women-in-tech-network
 
 
 

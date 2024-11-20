@@ -9,6 +9,8 @@ v0.1
 
 ---
 
+![](readme_docs/45a4ff23.png)
+
 ## Etapes
 
 - Création de l'application Backend Node JS

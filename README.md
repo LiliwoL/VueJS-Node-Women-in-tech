@@ -48,7 +48,7 @@ http://localhost:8088/
 
 # Lancement du docker
 
-Le fichier docker-compose.yml est configuré pour lancer les services :
+Le fichier docker-compose.yml est configuré pour lancer les services:
 - mariadb
 - phpmyadmin
 

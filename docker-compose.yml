@@ -48,7 +48,7 @@ services:
     # Ce service va utiliser l'image Docker créée à partir du Dockerfile
     build:
       context: .
-      dockerfile: ./Docker/Backend-Dockerfile
+      dockerfile: ./Docker/BACKEND-Dockerfile
     container_name: women-in-tech-backend
 
     # Fichier d'environnement
@@ -74,7 +74,38 @@ services:
     networks:
       - women-in-tech-network
 
+  ##############################
+  # FRONTEND
+  ############################
+  women-in-tech-frontend:
+    # Ce service va utiliser l'image Docker créée à partir du Dockerfile
+    build:
+      context: .
+      dockerfile: ./Docker/FRONTEND-Dockerfile
+    container_name: women-in-tech-frontend
 
+    # Fichier d'environnement
+    env_file:
+      - .env.docker
+
+    # On expose le port 8080 du conteneur vers le port 5001 de la machine hôte
+    ports:
+      - "8080:8080"
+
+    # Volumes pour monter les fichiers de l'application Node.js (placés dans le dossier BACKEND)
+    volumes:
+      # Dossier de l'app
+      - ./FRONTEND:/app
+      # Fichier d'environnement
+      - ./.env.docker:/app/.env.docker
+      # On monte le dossier node_modules pour éviter de réinstaller les dépendances à chaque redémarrage du conteneur
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    # Commande exécutée au démarrage du service
+    command: sh -c "yarn install && yarn serve"
+    networks:
+      - women-in-tech-network
 
 networks:
   women-in-tech-network:
